@@ -1,0 +1,35 @@
+\documentclass[11pt]{jsarticle}
+
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[hang,small,bf]{caption}
+\usepackage[subrefformat=parens]{subcaption}
+\captionsetup{compatibility=false}
+
+\begin{document}
+
+\begin{figure}
+  \begin{minipage}{0.45\linewidth}
+    \centering
+    \includegraphics[keepaspectratio, width=0.5\linewidth]{figures/sample.png}
+    \subcaption{サンプル1}
+    \label{sample1}
+  \end{minipage}
+  \begin{minipage}{0.45\linewidth}
+    \centering
+    \includegraphics[keepaspectratio, width=0.5\linewidth]{figures/sample.png}
+    \subcaption{サンプル2}
+    \label{sammple2}
+  \end{minipage} \\
+  \begin{minipage}{0.45\linewidth}
+    \centering
+    \includegraphics[keepaspectratio, width=0.5\linewidth]{figures/sample.png}
+    \subcaption{サンプル3}
+    \label{sample3}
+  \end{minipage}
+  \caption{3つのサンプル}
+  \label{sample*3}
+\end{figure}
+
+図\ref{sample*3}\subref{sample1}を見て下さい。
+
+\end{document}

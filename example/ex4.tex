@@ -1,0 +1,40 @@
+\documentclass[11pt]{jsarticle}
+
+\usepackage{booktabs}
+
+\begin{document}
+
+表\ref{score}は4人の成績を表しています。
+
+\begin{table}[htbp]
+  \begin{minipage}[t]{0.45\hsize}
+    \caption{生徒の成績}
+    \label{score}
+    \centering
+    \begin{tabular}{l||ccc}
+      \hline
+              & \multicolumn{3}{c}{科目}               \\
+      名前    & 英語                     & 数学 & 国語 \\ \hline\hline
+      Tatsuya & 95                       & 100  & 80   \\ \hline
+      Miyuki  & 85                       & 80   & 95   \\ \hline
+      Masaki  & 80                       & 90   & 85   \\ \hline
+      Honoka  & 90                       & 75   & 85   \\ \hline
+    \end{tabular}
+  \end{minipage}
+  \begin{minipage}[t]{0.45\hsize}
+    \caption{C言語の代表的なデータの型}
+    \label{c_data_type}
+    \centering
+    \begin{tabular}{lcr}
+      \toprule
+      データの型   & 宣言   & ビット幅 \\
+      \midrule
+      文字型       & char   & 8        \\
+      整数型       & int    & 32       \\
+      倍精度実数型 & double & 64       \\
+      \bottomrule
+    \end{tabular}
+  \end{minipage}
+\end{table}
+
+\end{document}
