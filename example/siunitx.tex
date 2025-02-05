@@ -1,0 +1,60 @@
+\documentclass[11pt]{jsarticle}
+
+\usepackage{siunitx}
+
+\begin{document}
+
+様々な単位の書き方
+
+\begin{itemize}
+  \item \textbackslash qty\{3\}\{kg\}：\qty{3}{kg}
+  \item \textbackslash qty\{3\}\{\textbackslash kilogram\}：\qty{3}{\kilogram}
+  \item \textbackslash qty\{3\}\{\textbackslash kilo\textbackslash gram\}：\qty{3}{\kilo\gram}
+\end{itemize}
+
+様々な数値の出力
+
+\begin{itemize}
+  \item \textbackslash qty\{30000\}\{kg\}：\qty{30000}{kg}
+  \item \textbackslash qty\{3e4\}\{kg\}：\qty{3e4}{kg}
+  \item \textbackslash qty\{0.00003\}\{kg\}：\qty{0.00003}{kg}
+  \item \textbackslash qty\{3e-5\}\{kg\}：\qty{3e-5}{kg}
+  \item \textbackslash num[exponent-mode=scientific]\{1000\}：\num[exponent-mode=scientific]{1000}
+  \item \textbackslash num[group-separator=\{,\}]\{10000\}：\num[group-separator={,}]{10000}
+\end{itemize}
+
+組み立て単位
+
+\begin{itemize}
+  \item \textbackslash unit\{\textbackslash newton\}：\unit{\newton}
+  \item \textbackslash unit\{\textbackslash kg.m.s\textasciicircum\{-1\}\}：\unit{kg.m.s^{-1}}
+  \item \textbackslash unit\{\textbackslash kilogram\textbackslash meter\textbackslash per\textbackslash second\}：\unit{\kilogram\meter\per\second}
+  \item \textbackslash unit[per-mode=symbol]\{\textbackslash kilogram\textbackslash meter\textbackslash per\textbackslash second\}：\unit[per-mode=symbol]{\kilogram\meter\per\second}
+  \item \textbackslash unit[per-mode=fraction]\{\textbackslash kilogram\textbackslash meter\textbackslash per\textbackslash second\}：\unit[per-mode=fraction]{\kilogram\meter\per\second}
+\end{itemize}
+
+リスト
+
+\begin{itemize}
+  \item \textbackslash qtylist\{0.13;0.67;0.80\}\{mm\}：\qtylist{0.13;0.67;0.80}{mm}
+  \item \textbackslash qtylist[list-final-separator = \{, \}]\{0.13;0.67;0.80\}\{mm\}：\qtylist[list-final-separator = {, }]{0.13;0.67;0.80}{mm}
+\end{itemize}
+
+範囲
+
+\begin{itemize}
+  \item \textbackslash qtyrange\{5\}\{100\}\{mm\}：\qtyrange{5}{100}{mm}
+  \item \textbackslash qtyrange[range-phrase=\{\text{-}\text{-}\}]\{5\}\{100\}\{mm\}：\qtyrange[range-phrase={--}]{5}{100}{mm}
+\end{itemize}
+
+掛け算・べき乗
+
+\begin{itemize}
+  \item \textbackslash qtyproduct\{2x3x4\}\{cm\}：\qtyproduct{2x3x4}{cm}
+  \item \textbackslash unit\{m\textasciicircum2\}：\unit{m^2}
+  \item \textbackslash unit\{\textbackslash square\textbackslash meter\}：\unit{\square\meter}
+  \item \textbackslash unit\{\textbackslash cubic\textbackslash meter\}：\unit{\cubic\meter}
+  \item \textbackslash unit\{\textbackslash meter\textbackslash tothe\{N\}\}：\unit{\meter\tothe{N}}
+\end{itemize}
+
+\end{document}
