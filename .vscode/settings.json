@@ -10,7 +10,7 @@
             "name": "latexmk",
             "command": "bash",
             "args": [
-                "../compile_remove.sh",
+                "../compile.sh",
                 "%RELATIVE_DOC%"
             ]
         },
